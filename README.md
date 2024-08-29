@@ -340,3 +340,5 @@ Compare Langchain and Langflow (what we use to make app in July).<br>
 
 
 ### PDF QA Robot
+### Speech_to_speech(translator)
+
