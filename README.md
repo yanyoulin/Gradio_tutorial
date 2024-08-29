@@ -1,6 +1,6 @@
 # Gradio_tutorial
 
 ### Download
-‵‵‵python
+```python
 !pip install gradio==3.50.2
-‵‵‵
+```
