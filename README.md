@@ -4,13 +4,13 @@
 ```python
 !pip install gradio==3.50.2
 ```
-Why we choose 3.50.2 rather than the latest version is because the latest version removes the tool parameter like "sources".
-So, there are some function we can't use easily because of this.
+Why we choose 3.50.2 rather than the latest version is because the latest version removes the tool parameter like "sources". 
+So, there are some function we can't use easily because of this. 
 
 ## What is Gradio?
 Gradio is an open-source Python library that simplifies the process of creating user interfaces for machine learning models and other Python functions. 
 It allows developers to build interactive web-based interfaces that users can access through a browser. 
-After you run your code, it will give you a url link, so you can use your app on the website!
+After you run your code, it will give you a url link, so you can use your app on the website! 
 
 ## Easy application of Gradio
 # 1. Hello World!
@@ -20,17 +20,16 @@ import gradio as gr
 def greet(name):
     return "Hello " + name
 
-# We instantiate the Textbox class
 textbox = gr.Textbox(label="Type your name here:", placeholder="Jessica", lines=2)
 
 gr.Interface(fn=greet, inputs=textbox, outputs="text").launch()
 ```
-Gradio's interface has three inportant parameters:
-Interface(fn, inputs, outputs, ...)
-* fn: the prediction function that is wrapped by the Gradio interface.
-* inputs: the input component type.
-* outputs: the output component type.
-
+Gradio's interface has three inportant parameters: 
+Interface(fn, inputs, outputs, ...) 
+* fn: the prediction function that is wrapped by the Gradio interface. 
+* inputs: the input component type. 
+* outputs: the output component type. 
+ 
 And this is the result:
 
 
@@ -38,7 +37,7 @@ https://github.com/user-attachments/assets/e654d6f7-a7c7-4cf9-8a10-7b786d4cc97f
 
 
 # 2. Make prediction!
-Using the pipeline() function from HuggingFace Transformers.
+Using the pipeline() function from HuggingFace Transformers. 
 ```python
 from transformers import pipeline
 
@@ -49,8 +48,8 @@ def predict(prompt):
     return completion
 gr.Interface(fn=predict, inputs="text", outputs="text").launch()
 ```
-This function completes prompts that you provide.
-
+This function completes prompts that you provide. 
+ 
 And this is the result:
 
 
@@ -72,8 +71,8 @@ def reverse_audio(audio):
 mic = gr.Audio(source="microphone" ,type="numpy", label="Speak here...")
 gr.Interface(reverse_audio, mic, "audio").launch()
 ```
-
-And this is the result:
+ 
+And this is the result: 
 
 
 https://github.com/user-attachments/assets/4e38f527-5c8b-458c-abde-6d42c37d6866
@@ -108,7 +107,7 @@ gr.Interface(
     outputs="text",
 ).launch()
 ```
-
+ 
 And this is the result:
 
 
@@ -116,16 +115,16 @@ https://github.com/user-attachments/assets/b5665c3b-174e-4f89-9db3-96a1ead6ab52
 
 
 # 5. Pictionary
-The Interface class supports some optional parameters:
-* title: you can give a title to your demo, which appears above the input and output components.
-* description: you can give a description for the interface, which appears above the input and output components and below the title.
-* article: you can also write an expanded article explaining the interface.
-* theme: Set the theme to use one of default, huggingface, grass, peach.
-* examples: provide some example inputs for the function. These appear below the UI components and can be used to populate the interface.
-* live: to make your model reruns every time the input changes, you can set live=True.
-We use class_names.txt and pytorch_model.bin that HuggingFace provided:
-class_names.txt
-`
+The Interface class supports some optional parameters: 
+* title: you can give a title to your demo, which appears above the input and output components. 
+* description: you can give a description for the interface, which appears above the input and output components and below the title. 
+* article: you can also write an expanded article explaining the interface. 
+* theme: Set the theme to use one of default, huggingface, grass, peach. 
+* examples: provide some example inputs for the function. These appear below the UI components and can be used to populate the interface. 
+* live: to make your model reruns every time the input changes, you can set live=True. 
+We use class_names.txt and pytorch_model.bin that HuggingFace provided: 
+class_names.txt 
+``
 airplane
 alarm_clock
 anvil
@@ -226,8 +225,8 @@ triangle
 umbrella
 wheel
 wristwatch
-`
-And here is the code:
+`` 
+And here is the code: 
 ```python
 from pathlib import Path
 import torch
