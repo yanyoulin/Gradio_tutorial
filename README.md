@@ -13,7 +13,7 @@ It allows developers to build interactive web-based interfaces that users can ac
 After you run your code, it will give you a url link, so you can use your app on the website! <br>
 
 ## Easy application of Gradio
-# 1. Hello World!
+### 1. Hello World!
 ```python
 import gradio as gr
 
@@ -36,7 +36,7 @@ And this is the result:
 https://github.com/user-attachments/assets/e654d6f7-a7c7-4cf9-8a10-7b786d4cc97f
 
 
-# 2. Make prediction!
+### 2. Make prediction!
 Using the pipeline() function from HuggingFace Transformers. 
 ```python
 from transformers import pipeline
@@ -57,7 +57,7 @@ https://github.com/user-attachments/assets/241196bd-89ee-49c4-9318-636292bb2aaa
 
 
 
-# 3. Reverse Audio
+### 3. Reverse Audio
 Build an Interface that works with audio.
 ```python
 import numpy as np
@@ -78,7 +78,7 @@ And this is the result:
 https://github.com/user-attachments/assets/4e38f527-5c8b-458c-abde-6d42c37d6866
 
 
-# 4. Easy speech to text
+### 4. Easy speech to text
 Load speech recognition model using the pipeline() function from HuggingFace Transformers. 
 ```python
 from transformers import pipeline
@@ -114,7 +114,7 @@ And this is the result:
 https://github.com/user-attachments/assets/b5665c3b-174e-4f89-9db3-96a1ead6ab52
 
 
-# 5. Pictionary
+### 5. Pictionary
 The Interface class supports some optional parameters: 
 * title: you can give a title to your demo, which appears above the input and output components. 
 * description: you can give a description for the interface, which appears above the input and output components and below the title. 
@@ -279,4 +279,61 @@ And this is the result:
 
 
 https://github.com/user-attachments/assets/f9a42907-8e42-4801-9aee-36117770630b
+
+
+We can see that this model is not that precise. Maybe we can try an other.
+### 6. Chat Bot with OpenAI API
+Of course, we can use OpenAI like Chatgpt.
+```python
+!pip install openai==0.27.0
+
+import openai
+import gradio as gr
+
+openai.api_key = "OpenAI_API_key"
+
+def chat_with_gpt(prompt):
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        message = response['choices'][0]['message']['content']
+        return message.strip()
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+
+with gr.Blocks() as demo:
+    gr.Markdown("# gpt-3.5-turbo Chatbot")
+    with gr.Row():
+        txt_input = gr.Textbox(label="Your Message", placeholder="Ask me anything!")
+        txt_output = gr.Textbox(label="Chatbot Response")
+    submit_btn = gr.Button("Send")
+
+    submit_btn.click(chat_with_gpt, inputs=txt_input, outputs=txt_output)
+
+demo.launch()
+```
+<br>
+And this is the result:
+
+
+https://github.com/user-attachments/assets/b7019dc3-87ff-4a4d-ab4a-f2ed46bb8701
+
+
+## What else can we do?
+We can use Gradio as our interactive demo base and we use others llm api. <br>
+For example:
+* OpenAI
+* Assembly.AI-Speech to text
+* elevenlabs.io-Text to speech
+* HuggingFace-from transformers import pipeline <br>
+<br>
+And we can use langchain and coding by python.<br>
+Compare Langchain and Langflow(what we use to make app in july)<br>
+| **Feature**            | **LangChain**                                | **LangFlow**                                |
+|--------------------|---------------------------------------------|---------------------------------------------|
+| **Min threhold**        | May should good at coding               | Know how to code and have basic knowledge               |
+| **Operation**        | coding                       | many components, link them                         |
+| **Flexibilty**          | Well                 | not that much               |
 
