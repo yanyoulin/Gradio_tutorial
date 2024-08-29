@@ -330,11 +330,12 @@ For example:
 * HuggingFace-from transformers import pipeline <br>
 <br>
 And we can use langchain and coding by python.<br>
-Compare Langchain and Langflow(what we use to make app in july)<br>
+Compare Langchain and Langflow (what we use to make app in July).<br>
+
 | **Feature**        | **LangChain**                           | **LangFlow**                               |
 |--------------------|-----------------------------------------|---------------------------------------------|
-| **Min threhold**   | May should good at coding               | Know how to code and have basic knowledge   |
-| **Operation**      | coding                                  | many components, link them                  |
-| **Flexibilty**     | Well                                    | not that much                               |
+| **Min threshold**  | May need to be good at coding           | Know how to code and have basic knowledge   |
+| **Operation**      | Coding                                  | Many components, link them                  |
+| **Flexibility**    | High                                    | Not as much                                 |
 
 
