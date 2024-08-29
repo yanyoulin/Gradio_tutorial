@@ -331,9 +331,10 @@ For example:
 <br>
 And we can use langchain and coding by python.<br>
 Compare Langchain and Langflow(what we use to make app in july)<br>
-| **Feature**            | **LangChain**                                | **LangFlow**                                |
-|--------------------|---------------------------------------------|---------------------------------------------|
-| **Min threhold**        | May should good at coding               | Know how to code and have basic knowledge               |
-| **Operation**        | coding                       | many components, link them                         |
-| **Flexibilty**          | Well                 | not that much               |
+| **Feature**        | **LangChain**                           | **LangFlow**                               |
+|--------------------|-----------------------------------------|---------------------------------------------|
+| **Min threhold**   | May should good at coding               | Know how to code and have basic knowledge   |
+| **Operation**      | coding                                  | many components, link them                  |
+| **Flexibilty**     | Well                                    | not that much                               |
+
 
