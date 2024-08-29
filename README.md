@@ -341,4 +341,7 @@ Compare Langchain and Langflow (what we use to make app in July).<br>
 
 ### PDF QA Robot
 ### Speech_to_speech(translator)
+<br><br>
+### Reference:
+[HuggingFace NLP course](https://huggingface.co/learn/nlp-course/en/chapter9/1?fw=pt)
 
