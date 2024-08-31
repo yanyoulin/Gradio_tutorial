@@ -78,3 +78,5 @@ else:
 ```
 [elevenlabs.io](https://elevenlabs.io/app/speech-synthesis/text-to-speech)
 [How_to_use](https://elevenlabs.io/docs/api-reference/getting-started)
+# Reference
+[Youtube AssemblyAI](https://www.youtube.com/watch?v=ZduW0N31JuE)
