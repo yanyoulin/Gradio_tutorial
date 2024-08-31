@@ -28,7 +28,7 @@ def voice_to_voice(audio_file):
 
 
 def audio_transcription(audio_file):
-    aai.settings.api_key = "adeb22599cd049cc8df127886b5ec127"
+    aai.settings.api_key = "AssemblyAI_API_Key"
 
     transcriber = aai.Transcriber()
     transcription = transcriber.transcribe(audio_file)
@@ -49,11 +49,11 @@ def text_translation(text):
 
 def text_to_speech(text):
     client = ElevenLabs(
-        api_key= "sk_94073696dcd84ab64f975cf7129ebf102468af2d6097a3d6",
+        api_key= "ElevenLabs_API_Key",
     )
 
     response = client.text_to_speech.convert(
-        voice_id="pNInz6obpgDQGcFmaJgB",
+        voice_id="pNInz6obpgDQGcFmaJgB", //the voice you want to change to
         optimize_streaming_latency="0",
         output_format="mp3_22050_32",
         text=text,
