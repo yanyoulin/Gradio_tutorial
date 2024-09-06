@@ -81,6 +81,6 @@ else:
 ### 心得
 自己實作下來的心得是這兩個AI模型確實好用，但仍有他們的缺點。<br>
 AssemblyAI中可偵測的語言有限，像我嘗試使用中文的語音輸入，發現它會照它聽到的的聲音強行使用英文空耳出來，並不是我們想要的結果。<br>
-ElevenLabs.io真的是一個強大的AI工具，它不但能text-to-speech如我們這次使用的功能外，它還可以speech-to-text和speech-to-speech，最酷的是可以見自己聲音的資料庫讓輸出不同語言的結果是自己的聲音，但缺點就是我們很容易把它的quota用完，所以這個工具很花錢，對學生或者企業大量使用可能不是最好的選擇。
+ElevenLabs.io真的是一個強大的AI工具，它不但能text-to-speech如我們這次使用的功能外，它還可以speech-to-speech，最酷的是可以見自己聲音的資料庫讓輸出不同語言的結果是自己的聲音，但缺點就是我們很容易把它的quota用完，所以這個工具很花錢，對學生或者企業大量使用可能不是最好的選擇。
 # Reference
 [Youtube AssemblyAI](https://www.youtube.com/watch?v=ZduW0N31JuE)
